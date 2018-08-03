@@ -1,4 +1,3 @@
-const botconfig = require('./botconfig.json');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const request = require('request');
@@ -7,7 +6,7 @@ const puppeteer = require('puppeteer');
 var department, subject, courseNumber = "";
 
 
-client.login(botconfig.token);
+client.login(process.env.TOKEN);
 
 client.on('guildMemberAdd', member => {
 
