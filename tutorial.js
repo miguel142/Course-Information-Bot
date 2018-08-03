@@ -143,7 +143,7 @@ function requestPDF(formData, message)
       (async () => {
         const browser = await puppeteer.launch();
         const page = await browser.newPage();
-        await page.goto("Course-Information-Bot/test.html");
+        await page.goto("file:///C:/Users/Anson/Desktop/Course-Information-Bot/test.html");
         await page.screenshot({path: './albany.png',
         fullPage: true});
         await browser.close();
