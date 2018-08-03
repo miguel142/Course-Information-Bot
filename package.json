@@ -1,10 +1,10 @@
 {
-  "name": "UAlbany Bot",
-  "description": "Bot for UA Discord",
+  "name": "Bot",
+  "description": "Discord",
   "version": "0.0.0",
-  "main": "bot.js",
+  "main": "tutorial.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node tutorial.js"
   },
   "dependencies": {
     "discord.js": "^11.3.2",
