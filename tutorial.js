@@ -7,8 +7,6 @@ const puppeteer = require('puppeteer');
 const botinfo = require("./botinfo.json");
 const commands = require('./commands.js');
 var department, subject, courseNumber = "";
-var mysql = require('mysql');
-
 
 var timeStarted;
 client.login(botconfig.token);
