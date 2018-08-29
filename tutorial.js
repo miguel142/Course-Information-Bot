@@ -251,7 +251,8 @@ function requestPDF(formData, message)
       });
 
       (async () => {
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],});
         const page = await browser.newPage();
         //await page.goto("file:///C:/Users/Anson/Desktop/Course-Information-Bot/test.html");
         await page.goto("~/Course-Information-Bot/test.html");
