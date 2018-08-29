@@ -244,7 +244,8 @@ function requestPDF(formData, message)
 
       var fs = require('fs');
       var https = require('https');
-
+      var pageLink = "https://www.albany.edu/cgi-bin/general-search/search.pl?" + formData;
+      console.log(pageLink);
       fs.writeFile('test.html', body, function(err) {
         if(err) throw err;
         console.log("Success!");
@@ -255,7 +256,7 @@ function requestPDF(formData, message)
           args: ['--no-sandbox', '--disable-setuid-sandbox'],});
         const page = await browser.newPage();
         //await page.goto("file:///C:/Users/Anson/Desktop/Course-Information-Bot/test.html");
-        await page.goto("/root/Course-Information-Bot/test.html");
+        await page.goto(pageLink);
         await page.screenshot({path: './albany.png',
         fullPage: true});
         await browser.close();
