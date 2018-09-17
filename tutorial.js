@@ -64,7 +64,7 @@ function requestPDF(formData, message, username)
         await page.screenshot({path: './' + username + '.png',
         fullPage: true});
         await browser.close();
-        await message.channel.send('Course Info for Fall 2018:', {files: [new Discord.Attachment('./' +username + '.png')]});
+        await message.channel.send('Course Info for Fall 2018:', {files: [new Discord.Attachment('./' + username + '.png')]});
       })();
 
   });
